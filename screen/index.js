@@ -9,7 +9,9 @@ const Stack = createMaterialBottomTabNavigator();
 export default function RootNavigation() {
     return (
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+        barStyle={{ backgroundColor: '#00ad76' }}
+        >
           <Stack.Screen name="MapaLaisGabriel" component={MapaLaisGabriel} />
           <Stack.Screen name="HomeLaisGabriel" component={HomeLaisGabriel}/>
         </Stack.Navigator>

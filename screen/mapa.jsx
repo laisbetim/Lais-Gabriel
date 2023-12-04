@@ -111,9 +111,28 @@ export default function MapaLaisGabriel() {
               }}
             />
            
-            
-        
-        
+            <View style={styles.mapcont}>
+          {location && (
+            <MapView
+              style={styles.map}
+              initialRegion={{
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+              }}
+            >
+              <Marker
+                coordinate={{
+                  latitude: location.coords.latitude,
+                  longitude: location.coords.longitude,
+                }}
+                title="My Location"
+                description="This is where I am"
+              />
+            </MapView>
+          )}
+        </View>
         </View>
                 
       );
